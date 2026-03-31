@@ -1,0 +1,300 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Vishwachetana Residential School (CBSE) – Vishwachetana Group</title>
+<style>@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap');
+
+:root{
+  --navy:#0D2B55;--navy2:#163A6B;--gold:#C8960C;--gold-light:#F5D97A;
+  --cream:#FAFAF7;--g100:#F4F4F0;--g200:#E8E8E2;--g500:#8A8A7A;--g800:#2E2E28;
+  --green:#1A7A4A;
+  --s1:0 2px 14px rgba(13,43,85,.09);--s2:0 8px 32px rgba(13,43,85,.14);--s3:0 24px 64px rgba(13,43,85,.18);
+  --r:16px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',system-ui,sans-serif;background:var(--cream);color:var(--g800);overflow-x:hidden}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(255,255,255,.97);backdrop-filter:blur(18px);border-bottom:1px solid var(--g200);display:flex;align-items:center;justify-content:space-between;padding:0 5%;height:72px;box-shadow:var(--s1);transition:.3s}
+.nav-logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+.logo-box{width:44px;height:44px;border-radius:10px;overflow:hidden;flex-shrink:0;background:var(--navy);display:flex;align-items:center;justify-content:center}
+.logo-box img{width:100%;height:100%;object-fit:contain}
+.logo-txt strong{display:block;font-family:'Playfair Display',serif;color:var(--navy);font-size:15px;line-height:1.2}
+.logo-txt span{font-size:11px;color:var(--g500);letter-spacing:.04em}
+.nav-links{display:flex;align-items:center;gap:2px;list-style:none}
+.nav-links a{text-decoration:none;color:var(--g800);font-size:13.5px;font-weight:500;padding:8px 13px;border-radius:8px;transition:.2s;white-space:nowrap}
+.nav-links a:hover,.nav-links a.active{background:var(--g100);color:var(--navy)}
+.nav-dd{position:relative}
+.nav-dd>a::after{content:' ▾';font-size:9px}
+.dd-menu{display:none;position:absolute;top:calc(100%+8px);left:0;background:#fff;border-radius:12px;box-shadow:var(--s3);min-width:270px;overflow:hidden;border:1px solid var(--g200)}
+.nav-dd:hover .dd-menu{display:block}
+.dd-menu a{display:block;padding:11px 20px;font-size:13px;color:var(--g800);transition:.15s}
+.dd-menu a:hover{background:var(--g100);color:var(--navy)}
+.nav-right{display:flex;align-items:center;gap:12px}
+.nav-phone{font-size:13px;color:var(--g500);text-decoration:none;font-weight:500}
+.btn-navy{background:var(--navy);color:#fff;padding:10px 20px;border-radius:10px;font-size:13.5px;font-weight:600;text-decoration:none;transition:.2s;white-space:nowrap}
+.btn-navy:hover{background:var(--navy2)}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px}
+.hamburger span{display:block;width:24px;height:2px;background:var(--navy);border-radius:2px}
+.mob-menu{display:none;position:fixed;top:72px;left:0;right:0;bottom:0;background:#fff;z-index:999;overflow-y:auto;padding:24px}
+.mob-menu.open{display:block}
+.mob-menu a{display:block;padding:13px 0;font-size:15px;color:var(--g800);text-decoration:none;border-bottom:1px solid var(--g200);font-weight:500}
+.mob-sub a{padding:11px 0 11px 20px;font-size:13.5px;color:var(--g500)}
+
+/* PAGE HERO BANNER */
+.page-banner{height:280px;background:linear-gradient(135deg,var(--navy) 0%,var(--navy2) 100%);display:flex;align-items:center;padding:0 5%;margin-top:72px;position:relative;overflow:hidden}
+.page-banner::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle at 80% 50%,rgba(200,150,12,.15),transparent 60%),radial-gradient(circle at 20% 80%,rgba(255,255,255,.05),transparent 50%)}
+.page-banner-inner{max-width:1280px;margin:0 auto;width:100%;position:relative;z-index:1}
+.page-banner h1{font-family:'Playfair Display',serif;font-size:clamp(28px,4vw,52px);font-weight:800;color:#fff;margin-bottom:12px}
+.breadcrumb{display:flex;align-items:center;gap:8px;font-size:13px;color:rgba(255,255,255,.6)}
+.breadcrumb a{color:var(--gold-light);text-decoration:none}
+.breadcrumb a:hover{color:#fff}
+.breadcrumb span{color:rgba(255,255,255,.4)}
+
+/* SECTIONS */
+.sec{padding:80px 5%}
+.sw{max-width:1280px;margin:0 auto}
+.sec-lbl{font-size:11.5px;letter-spacing:.12em;font-weight:700;color:var(--gold);text-transform:uppercase;margin-bottom:12px;display:flex;align-items:center;gap:8px}
+.sec-lbl::before{content:'';display:inline-block;width:22px;height:2px;background:var(--gold)}
+h2{font-family:'Playfair Display',serif;font-size:clamp(24px,3.5vw,44px);font-weight:800;color:var(--navy);line-height:1.15;margin-bottom:14px}
+h3{font-family:'Playfair Display',serif;font-size:clamp(18px,2.5vw,28px);font-weight:700;color:var(--navy);line-height:1.2;margin-bottom:10px}
+.sec-sub{font-size:15.5px;color:var(--g500);line-height:1.75;max-width:560px}
+.sec-hdr{margin-bottom:50px}
+.ctr{text-align:center}
+.ctr .sec-lbl{justify-content:center}
+.ctr .sec-lbl::before{display:none}
+.ctr .sec-sub{margin:0 auto}
+
+/* BUTTONS */
+.btn-primary{background:var(--navy);color:#fff;padding:13px 28px;border-radius:12px;font-size:14.5px;font-weight:600;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:.25s;box-shadow:0 4px 20px rgba(13,43,85,.25)}
+.btn-primary:hover{background:var(--navy2);transform:translateY(-2px)}
+.btn-gold{background:var(--gold);color:var(--navy);padding:12px 24px;border-radius:10px;font-size:14px;font-weight:700;text-decoration:none;transition:.2s;display:inline-block}
+.btn-gold:hover{background:#daa50e}
+.btn-outline{background:transparent;color:var(--navy);padding:12px 24px;border:2px solid var(--navy);border-radius:10px;font-size:14px;font-weight:600;text-decoration:none;display:inline-block;transition:.2s}
+.btn-outline:hover{background:var(--navy);color:#fff}
+
+/* CARDS */
+.card{border-radius:var(--r);overflow:hidden;box-shadow:var(--s1);background:#fff;border:1px solid var(--g200);transition:.3s}
+.card:hover{transform:translateY(-5px);box-shadow:var(--s3)}
+.card img{width:100%;object-fit:cover;display:block}
+
+/* STATS BAND */
+.stats-band{background:var(--navy);padding:60px 5%}
+.stats-inner{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:36px}
+.stat-box{text-align:center}
+.stat-box .big{font-family:'Playfair Display',serif;font-size:52px;font-weight:800;color:var(--gold);line-height:1}
+.stat-box .plus{color:var(--gold-light);font-size:28px;font-weight:800}
+.stat-box .lbl{font-size:13px;color:rgba(255,255,255,.55);margin-top:8px;text-transform:uppercase;letter-spacing:.07em}
+
+/* STRIP */
+.strip{background:var(--gold);padding:16px 5%;display:flex;align-items:center;justify-content:center;gap:20px;flex-wrap:wrap}
+.strip p{color:var(--navy);font-size:14.5px;font-weight:500}
+.strip strong{font-weight:800}
+
+/* FOOTER */
+footer{background:#081929;padding:60px 5% 28px}
+.footer-inner{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:52px;margin-bottom:40px}
+.f-logo{display:flex;align-items:center;gap:11px;margin-bottom:18px}
+.f-logo img{height:36px;filter:brightness(0) invert(1)}
+.f-about{font-size:13.5px;color:rgba(255,255,255,.5);line-height:1.75;margin-bottom:20px}
+.f-phone a{color:var(--gold);font-size:17px;font-weight:700;text-decoration:none}
+.f-col h4{color:#fff;font-size:14px;font-weight:700;margin-bottom:16px}
+.f-links{list-style:none}
+.f-links li{margin-bottom:9px}
+.f-links a{color:rgba(255,255,255,.5);font-size:13.5px;text-decoration:none;transition:.2s}
+.f-links a:hover{color:var(--gold)}
+.footer-bot{max-width:1280px;margin:0 auto;border-top:1px solid rgba(255,255,255,.08);padding-top:22px;display:flex;justify-content:space-between;align-items:center;font-size:12.5px;color:rgba(255,255,255,.3)}
+
+/* FADE */
+.fade-up{opacity:0;transform:translateY(26px);transition:opacity .6s,transform .6s}
+.fade-up.vis{opacity:1;transform:translateY(0)}
+.fade-up:nth-child(2){transition-delay:.1s}
+.fade-up:nth-child(3){transition-delay:.2s}
+.fade-up:nth-child(4){transition-delay:.3s}
+.fade-up:nth-child(5){transition-delay:.4s}
+.fade-up:nth-child(6){transition-delay:.5s}
+
+img{background:#e8eef5}
+
+/* RESPONSIVE */
+@media(max-width:1024px){.stats-inner{grid-template-columns:1fr 1fr}}
+@media(max-width:900px){.footer-inner{grid-template-columns:1fr 1fr}}
+@media(max-width:768px){
+  .nav-links,.nav-right{display:none}
+  .hamburger{display:flex}
+  .footer-inner{grid-template-columns:1fr;gap:28px}
+  .footer-bot{flex-direction:column;gap:8px;text-align:center}
+  .stats-inner{grid-template-columns:1fr 1fr}
+}
+.inst-hero{height:420px;position:relative;margin-top:72px;overflow:hidden}
+.inst-hero img{width:100%;height:100%;object-fit:cover;display:block}
+.inst-hero::after{content:'';position:absolute;inset:0;background:linear-gradient(to right,rgba(13,43,85,.82),rgba(13,43,85,.4))}
+.inst-hero-body{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;padding:0 5%;z-index:1;max-width:1280px;margin:0 auto;width:100%}
+.inst-hero-body .tag{display:inline-block;background:rgba(200,150,12,.3);border:1px solid rgba(200,150,12,.5);color:var(--gold-light);font-size:11.5px;font-weight:700;text-transform:uppercase;padding:5px 14px;border-radius:100px;margin-bottom:16px}
+.inst-hero-body h1{font-family:'Playfair Display',serif;font-size:clamp(26px,4vw,50px);font-weight:800;color:#fff;line-height:1.15;margin-bottom:14px;max-width:640px}
+.inst-hero-body p{font-size:15px;color:rgba(255,255,255,.8);max-width:540px;line-height:1.7}
+.feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.feat-card{background:#fff;border-radius:var(--r);padding:24px;border:1px solid var(--g200);box-shadow:var(--s1);transition:.3s}
+.feat-card:hover{transform:translateY(-3px);box-shadow:var(--s2);border-color:var(--gold)}
+.feat-icon{font-size:30px;margin-bottom:12px}
+.feat-card h4{font-family:'Playfair Display',serif;font-size:16px;color:var(--navy);margin-bottom:8px}
+.feat-card p{font-size:13px;color:var(--g500);line-height:1.6}
+.hostel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.hostel-card{background:#fff;border-radius:12px;padding:20px;border:1px solid var(--g200)}
+.hostel-card .h-icon{font-size:26px;margin-bottom:10px}
+.hostel-card h4{font-family:'Playfair Display',serif;font-size:15px;color:var(--navy);margin-bottom:8px}
+.hostel-card ul{list-style:none;font-size:13px;color:var(--g500);line-height:1.8}
+.hostel-card ul li::before{content:'· ';color:var(--gold)}
+@media(max-width:900px){.feat-grid{grid-template-columns:1fr 1fr}.hostel-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.feat-grid{grid-template-columns:1fr}.hostel-grid{grid-template-columns:1fr}}
+</style></head><body>
+<nav id="nav">
+  <a href="index.html" class="nav-logo">
+    <div class="logo-box"><img src="https://vishwachetanagroups.in/img/logo (1).png" alt="Logo" onerror="this.parentNode.innerHTML='<span style=color:var(--gold);font-family:Playfair Display,serif;font-weight:800;font-size:18px>VC</span>'"></div>
+    <div class="logo-txt"><strong>Vishwachetana</strong><span>Group of Institutions</span></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li class="nav-dd">
+      <a href="#">Institutions</a>
+      <div class="dd-menu">
+        <a href="olympiad.html">Chetana Olympiad School</a>
+        <a href="pu-college.html">Vishwachetana PU College</a>
+        <a href="residential-pu.html">Residential PU College</a>
+        <a href="residential-state.html">Residential School (STATE)</a>
+        <a href="residential-cbse.html">Residential School (CBSE)</a>
+      </div>
+    </li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="placements.html">Placements</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="careers.html" style="color:#c0392b;font-weight:700">We're Hiring 🔥</a></li>
+  </ul>
+  <div class="nav-right">
+    <a href="tel:+919900052370" class="nav-phone">📞 +91 99000 52370</a>
+    <a href="contact.html" class="btn-navy">Apply Now →</a>
+  </div>
+  <div class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+</nav>
+<div class="mob-menu" id="mobMenu">
+  <a href="index.html" onclick="toggleMenu()">Home</a>
+  <a href="about.html" onclick="toggleMenu()">About Us</a>
+  <a href="#" onclick="toggleMenu()">Our Institutions</a>
+  <div class="mob-sub">
+    <a href="olympiad.html">Chetana Olympiad School</a>
+    <a href="pu-college.html">Vishwachetana PU College</a>
+    <a href="residential-pu.html">Residential PU College</a>
+    <a href="residential-state.html">Residential School (STATE)</a>
+    <a href="residential-cbse.html">Residential School (CBSE)</a>
+  </div>
+  <a href="gallery.html" onclick="toggleMenu()">Gallery</a>
+  <a href="placements.html" onclick="toggleMenu()">Placements</a>
+  <a href="contact.html" onclick="toggleMenu()">Contact Us</a>
+  <a href="careers.html">We Are Hiring 🔥</a>
+</div>
+<div class="inst-hero">
+  <img src="https://vishwachetanagroups.in/img/image15.png" alt="Residential School CBSE">
+  <div class="inst-hero-body">
+    <div class="tag">Residential · CBSE</div>
+    <h1>Vishwachetana Residential School (CBSE)</h1>
+    <p>CBSE-affiliated residential school offering a globally competitive curriculum with exceptional infrastructure, experienced faculty, and 24/7 mentoring.</p>
+  </div>
+</div>
+
+<section class="sec" style="background:var(--cream)">
+  <div class="sw">
+    <div class="sec-hdr"><div class="sec-lbl">Why CBSE?</div><h2>The CBSE Advantage</h2><p class="sec-sub">CBSE is recognised across India and internationally — the ideal choice for students who move frequently or plan to study abroad.</p></div>
+    <div class="feat-grid">
+      <div class="feat-card fade-up"><div class="feat-icon">🌍</div><h4>National Recognition</h4><p>CBSE is recognised across all Indian universities and colleges making admissions seamless.</p></div>
+      <div class="feat-card fade-up"><div class="feat-icon">📐</div><h4>Concept-Based Learning</h4><p>Strong emphasis on conceptual clarity in Maths and Science — ideal for JEE and NEET.</p></div>
+      <div class="feat-card fade-up"><div class="feat-icon">🖥️</div><h4>Modern Curriculum</h4><p>Regularly updated syllabus incorporating the latest in technology, science and humanities.</p></div>
+      <div class="feat-card fade-up"><div class="feat-icon">🏠</div><h4>Residential Focus</h4><p>Distraction-free residential campus with structured study time and 24/7 academic support.</p></div>
+      <div class="feat-card fade-up"><div class="feat-icon">🏆</div><h4>Competitive Exam Ready</h4><p>CBSE curriculum directly aligns with JEE, NEET, and other national entrance examinations.</p></div>
+      <div class="feat-card fade-up"><div class="feat-icon">🎓</div><h4>Holistic Development</h4><p>Academics, sports, arts, and life skills — we develop the complete student.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="stats-band">
+  <div class="stats-inner">
+    <div class="stat-box"><div class="big">40<span class="plus">+</span></div><div class="lbl">Expert Faculties</div></div>
+    <div class="stat-box"><div class="big">1000<span class="plus">+</span></div><div class="lbl">Students</div></div>
+    <div class="stat-box"><div class="big">38<span class="plus">+</span></div><div class="lbl">Years Excellence</div></div>
+    <div class="stat-box"><div class="big">5<span class="plus">+</span></div><div class="lbl">Branches</div></div>
+  </div>
+</div>
+
+<section class="sec" style="background:#fff">
+  <div class="sw">
+    <div class="sec-hdr ctr"><div class="sec-lbl">Hostel Facilities</div><h2>🏡 World-Class Hostel Life</h2></div>
+    <div class="hostel-grid">
+      <div class="hostel-card fade-up"><div class="h-icon">🛏️</div><h4>Accommodation</h4><ul><li>Spacious well-ventilated rooms</li><li>Study tables &amp; storage</li><li>Comfortable bedding provided</li></ul></div>
+      <div class="hostel-card fade-up"><div class="h-icon">🍽️</div><h4>Dining</h4><ul><li>Hygienic nutritious meals</li><li>Breakfast, lunch, dinner &amp; snacks</li><li>Dietary arrangements available</li></ul></div>
+      <div class="hostel-card fade-up"><div class="h-icon">🔐</div><h4>Security</h4><ul><li>24/7 security &amp; CCTV</li><li>Biometric access control</li><li>Emergency response</li></ul></div>
+      <div class="hostel-card fade-up"><div class="h-icon">🏥</div><h4>Medical</h4><ul><li>On-site medical room</li><li>Emergency medical support</li></ul></div>
+      <div class="hostel-card fade-up"><div class="h-icon">📖</div><h4>Study Areas</h4><ul><li>Quiet study rooms</li><li>e-Library access</li><li>Group study rooms with AV</li></ul></div>
+      <div class="hostel-card fade-up"><div class="h-icon">🎯</div><h4>Recreation</h4><ul><li>Indoor &amp; outdoor sports</li><li>Cultural programs</li><li>Counselling support</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" style="background:var(--cream)">
+  <div class="sw">
+    <div class="sec-hdr ctr"><div class="sec-lbl">Campus</div><h2>Our Campus</h2></div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px">
+      <img src="https://vishwachetanagroups.in/img/image15.png" alt="CBSE School" style="border-radius:var(--r);width:100%;height:280px;object-fit:cover;box-shadow:var(--s2);display:block">
+      <img src="https://vishwachetanagroups.in/img/image_135.jpg" alt="Students Studying" style="border-radius:var(--r);width:100%;height:280px;object-fit:cover;box-shadow:var(--s2);display:block">
+    </div>
+    <div style="text-align:center;margin-top:40px"><a href="contact.html" class="btn-primary">Enquire About Admission →</a></div>
+  </div>
+</section>
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="f-logo"><img src="https://vishwachetanagroups.in/img/vishwachetana _logo_white.png" alt="Vishwachetana White Logo"></div>
+      <p class="f-about">38 years of academic excellence in Davanagere, Karnataka. Nurturing future leaders through quality education, discipline, and holistic development across 5+ campuses.</p>
+      <div class="f-phone"><a href="tel:+919900052370">+91 99000 52370</a></div>
+    </div>
+    <div class="f-col">
+      <h4>Institutions</h4>
+      <ul class="f-links">
+        <li><a href="olympiad.html">Chetana Olympiad School</a></li>
+        <li><a href="pu-college.html">Vidya Chetana PU College</a></li>
+        <li><a href="residential-pu.html">Residential PU College</a></li>
+        <li><a href="residential-state.html">Residential School (STATE)</a></li>
+        <li><a href="residential-cbse.html">Residential School (CBSE)</a></li>
+      </ul>
+    </div>
+    <div class="f-col">
+      <h4>Quick Links</h4>
+      <ul class="f-links">
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="placements.html">Placements</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="careers.html">We Are Hiring 🔥</a></li>
+        <li><a href="https://drive.google.com/file/d/1JkzMpBT7dTf_934K8m7c0FFzX8GiiMG-/view?usp=sharing" target="_blank">Prospectus PDF</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bot">
+    <span>© 2025 Chetana Group of Institutions. All rights reserved.</span>
+    <span>NH 48, Vidyanagar, Davanagere, Karnataka 577005</span>
+  </div>
+</footer>
+<script>
+function toggleMenu(){document.getElementById('mobMenu').classList.toggle('open')}
+window.addEventListener('scroll',()=>{
+  document.getElementById('nav').style.boxShadow=window.scrollY>20?'0 4px 24px rgba(13,43,85,.18)':'0 2px 14px rgba(13,43,85,.09)'
+})
+const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('vis')})},{threshold:.1})
+document.querySelectorAll('.fade-up').forEach(el=>obs.observe(el))
+// highlight active nav link
+document.querySelectorAll('.nav-links a, .mob-menu a').forEach(a=>{
+  if(a.getAttribute('href')===location.pathname.split('/').pop()||
+     (location.pathname.endsWith('/')&&a.getAttribute('href')==='index.html'))
+    a.classList.add('active')
+})
+</script>
+</body></html>
